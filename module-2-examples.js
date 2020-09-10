@@ -257,3 +257,163 @@
 // console.log(total);
 
 // ============================================================
+
+// ===practice #7===
+
+// #7
+// а теперь максимальное число если функция принимает неограниченое к-во аргументов
+// const max = function () {}
+
+// const max = function (...items) {
+//   return Math.max(...items);
+// };
+
+// console.log(max(20, 10, 50, 40, 222, 30));
+
+// ============================================================
+
+// const createHumanFace = function (head, hair, nose, ears, eyes, beard) {
+//   return ` Human's face with params like ${head} head, ${hair} hair, ${nose} nose , ${ears} ears has been created.`;
+// };
+
+// console.log(createHumanFace("big", "dark", "big", "small", "green", "nice"));
+
+// ==============
+
+//  === Стрелочная функция(в одну строку) ===
+
+// const createHuman = (head, body, hands, legs) =>
+//   console.log(
+//     `Human's body with ${head} head , ${body} body, ${hands} hands, ${legs} legs.`
+//   );
+// createHuman("big", "fat", "three", "shaved");
+
+// ============================================================
+
+// ============================================================
+//  === practice #2 ===
+// #2
+// Напишите функцию hello(), которая при вызове будет принимать переменную name (например, «Василий») и
+// выводить строку (в нашем случае «Привет, Василий»).  В случае отсутствующего аргумента выводить «Привет, гость»
+
+// const greeting = function (name = "guest") {
+//   console.log(`Hello,  ${name}`);
+// };
+
+// greeting("Mark");
+
+// =================
+// ===Стрелочная функция(в одну строку)===
+
+// const greeting = (name = "guest") => console.log(`Hello, ${name}`);
+
+// greeting("John");
+
+// ============================================================
+
+// ============================================================
+
+// === practice #3 ===
+
+// #3
+// Создайте функцию repeat(str, n), которая возвращает строку, состоящую из
+//  n повторений строки str. n — по умолчанию 2, str — пустая строка
+
+// const repeat = function (str, n) {
+//   let result = "";
+//   for (let i = 0; i < n; i += 1) {
+//     result += str;
+//   }
+//   console.log(result);
+// };
+
+// repeat("Mark", 10);
+
+// ============================================================
+
+//  ============================================================
+
+// === practice #4 ===
+
+// #4
+// здайте функцию avg() , которая будет находить среднее значение по всем своим аргументам
+// (аргументы величины числовые).
+
+// const avg = function (...argumentus) {
+//   let total = 0;
+
+//   for (let argument of argumentus) {
+//     total += argument;
+//   }
+
+//   return Math.floor(total / argumentus.length);
+// };
+
+// console.log(avg(1, 2, 3, 4, 5, 6, 7, 8, 9, 10));
+
+//  ============================================================
+
+// ===function Expression===
+
+// const toShowName = function (firstName, secondName) {
+//   console.log(`${firstName} ${secondName}`);
+// };
+
+// toShowName("Goga", "Roga");
+
+// ===function Declaration===
+
+// function toShowName(firstName, secondName) {
+//     console.log(`${firstName} ${secondName}`)
+// }
+
+// ===fuinction ARROW===
+
+// const toShowName = (firstName, secondName) =>
+//   console.log(`${firstName} , ${secondName}`);
+// toShowName("Shrek", "Reck");
+
+// ==========================Practice==============================
+
+// ===task-1===
+
+// Написати ф-ю capitalize яка буде приймати строку і буде вертати нову строку де кожне слово буде починатися з великої літери.
+
+// capitalize('the quick brown fox') // 'The Quick Brown Fox '
+
+// const capitalize = function (string) {
+//   let words = string.split(" ");
+//   let arrayCapitalize = [];
+
+//   for (let word of words) {
+//     let capitalizeLetter = word[0].toUpperCase() + word.substring(1);
+//     arrayCapitalize.push(capitalizeLetter);
+//   }
+//   return arrayCapitalize.join(" ");
+// };
+
+// console.log(capitalize("the quick brown fox"));
+
+// ===task-2===
+
+// Написати ф-ю countVowels яка буде приймати строку і буде вертати кількість голосних літер. aeiouAEIOU - рядок з голосними в англ алфавіті
+
+const vowels = "aeiouAEIOU";
+const countVowels = function (string) {
+  console.log(string);
+
+  let array = string.split("");
+  console.log(array);
+  let total = [];
+  for (let element of array) {
+    //   console.log(element);
+    if (vowels.includes(element)) {
+      console.log("vowel:", element);
+
+      total.push(element);
+    }
+  }
+  console.log(total);
+};
+
+countVowels("the quick brown fox"); // 5
